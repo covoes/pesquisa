@@ -26,4 +26,5 @@
 - No caso de gráfico de linhas, além da cor use diferentes tipos de linha (pontilhada, tracejada, sólida etc)
 - Gere um arquivo de log para cada experimento e adicione nele o hash do commit referente a versão do código sendo usada
 - Setar a semente do gerador de números aleatórios nos experimentos e guardar o número que foi usado
+  - Cuidado para que cada repetição de um experimento use uma semente diferente das outras
   
