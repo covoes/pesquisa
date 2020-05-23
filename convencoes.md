@@ -14,3 +14,16 @@
   Aproveite-se disso e não coloque todo o conteúdo do parágrafo em uma única linha de texto. 
   Cada frase ficando em uma linha facilita identificar as mudanças nas revisões.
   - Procure sempre ter seu texto em um repositório git (seja github/bitbucket/etc), para que as revisões sejam feitas via pull request.
+
+# Experimentos/Análises
+
+- A média só conta parte da história, sempre guarde os valores de cada execução se possível.
+  - Caso não seja possível, guarde ao menos o desvio-padrão.
+- Prefira boxplots a gráficos de barra
+- Escolha cores amigáveis aos daltônicos
+  - [Aqui tem algumas dicas](https://thenode.biologists.com/data-visualization-with-flying-colors/research/)
+- Não esqueça de por rótulos nos eixos dos gráficos
+- No caso de gráfico de linhas, além da cor use diferentes tipos de linha (pontilhada, tracejada, sólida etc)
+- Gere um arquivo de log para cada experimento e adicione nele o hash do commit referente a versão do código sendo usada
+- Setar a semente do gerador de números aleatórios nos experimentos e guardar o número que foi usado
+  
