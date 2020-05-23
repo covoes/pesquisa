@@ -2,7 +2,7 @@
 
 - Notação matemática deve seguir a convenção de:
   - Escalares: letras minúsculas em itálica: ![x,y](https://render.githubusercontent.com/render/math?math=x%2Cy)
-    - Quando tiverem significado importante e não forem alterados, como número de objetos e número de atributos, usar letra maiúscula como N e M. Assim, ao ter um somatório sobre o número de objetos, você pode utilizar a letra minúscula para fazer a indexação. Essa é a notação padrão no livro do Bishop (PRML), por exemplo.
+    - Quando tiverem significado importante e não forem alterados, como número de objetos e número de atributos, usar letra maiúscula como *N* e *M*. Assim, ao ter um somatório sobre o número de objetos, você pode utilizar a letra minúscula para fazer a indexação. Essa é a notação padrão no livro do Bishop (PRML), por exemplo.
   - Vetores: letras minúsculas em negrito: ![\mathbf{x}, \mathbf{y}](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7Bx%7D%2C%20%5Cmathbf%7By%7D)
   - Matrizes: letras maiúsculas em negrito: ![\mathbf{X}, \mathbf{Y}](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7BX%7D%2C%20%5Cmathbf%7BY%7D)
   - Conjuntos: letras caligráficas maiúsculas (\mathcal no LaTeX): ![\mathcal{X}, \mathcal{Y}](https://render.githubusercontent.com/render/math?math=%5Cmathcal%7BX%7D%2C%20%5Cmathcal%7BY%7D)
