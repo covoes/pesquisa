@@ -1,0 +1,275 @@
+%%ARQUIVO PARA CONFIGURACAO DAS PAGINAS
+
+
+\usepackage[brazilian]{babel} %Package para identificação de portugues - brasileiro
+\usepackage[T1]{fontenc} % utilização na separação de sílabas
+\usepackage{ae} %auxilio na separação de sílabas
+%\usepackage{natbib} %para auxiliar nas referencias, caso necessário
+\usepackage{cite}
+\usepackage{amsmath}
+\usepackage{float}
+%\usepackage{wrapfigg}
+\usepackage[ansinew]{inputenc}
+\usepackage{graphics}
+\usepackage{calc}
+\usepackage{graphicx,color}
+\usepackage{amsthm,amsfonts}
+\usepackage{amssymb}
+\usepackage{epsfig}
+%\usepackage[center]{caption}
+%\usepackage[font=it,center]{caption}%font=it/textfont=it
+\usepackage[top=3cm,left=3cm,right=2cm,bottom=2cm]{geometry} %dimensoes da pagina
+\usepackage{url}
+\usepackage{rotating}
+%%compatibilidade com o estilo MEMOIR e package Fancyhdr
+\let\footruleskip\relax % for compatibility of memoir and fancyhdr
+\let\rm\rmfamily        % for compatibility of memoir and blindtext (demo only)
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{eso-pic}
+\usepackage{ifthen} %comando para gerar if`s else
+
+
+\usepackage{listings}
+\usepackage{color}
+\usepackage{textcomp}
+\definecolor{listinggray}{gray}{0.9}
+\definecolor{lbcolor}{rgb}{0.9,0.9,0.9}
+\lstset{
+	backgroundcolor=\color{white},
+	tabsize=4,
+	rulecolor=,
+	language=java,
+        basicstyle=\scriptsize,
+        upquote=true,
+        aboveskip={1.5\baselineskip},
+        columns=fixed,
+        showstringspaces=false,
+        extendedchars=true,
+        breaklines=true,
+        prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+        frame=single,
+        showtabs=false,
+        showspaces=false,
+        showstringspaces=false,
+        identifierstyle=\ttfamily,
+        keywordstyle=\color[rgb]{0,0,1},
+        commentstyle=\color[rgb]{0.133,0.545,0.133},
+        stringstyle=\color[rgb]{0.627,0.126,0.941},
+}
+
+
+%%%%%%%%%% definicao de header das paginas %%%%%%%%%%%%%%%%
+
+\pagestyle{fancy}                         %Forces the page to use the fancy template
+\renewcommand{\chaptermark}[1]{\markboth{\textbf{\thechapter}\ \emph{#1}}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
+
+\fancyhf{}                                %Clears all header and footer fields, in preparation.
+\fancyhead[LE,RO]{\textbf{\thepage}}      %Displays the page number in bold in the header, to the left on even pages and
+                                          %to the right on odd pages.
+\fancyhead[RE]{\nouppercase{\leftmark}}   %Displays the upper-level (section) information - as determined above - in non-
+                                          %upper case in the header, to the left on odd pages.
+\fancyhead[LO]{\rightmark}                %Displays the lower-level (chapter) information - as determined above - in the 							 %header, to the left on odd pages.
+\renewcommand{\headrulewidth}{0.5pt}      %Underlines the header. (Set to 0pt if not required).
+%\renewcommand{\footrulewidth}{0.5pt}      %Underlines the footer. (Set to 0pt if not required).
+
+%%%%%%%%%% fim da definicao de header das paginas %%%%%%%%%%%%%%%%
+
+
+%Para geração do arquivo com links, caso não queira é só comentar as duas  linhas abaixo
+\usepackage{hyperref}
+\hypersetup{colorlinks, debug=false,  linkcolor=black,  citecolor=black, urlcolor=blue, pdftitle={Um Estudo sobre a Perspectiva da Modelagem de Sistemas Multiagentes via a Teoria das Redes Sociais}, pdfauthor={André Filipe de Moraes Batista}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%GERACAO DE DRAFT
+
+\ifdraftdoc
+%\usepackage{draftwatermark}
+\usepackage[firstpage]{draftwatermark}
+%\usepackage{watermark}
+
+% Use the following to make modification
+\SetWatermarkAngle{0}
+\SetWatermarkLightness{0.6}
+\SetWatermarkFontSize{3cm}
+\SetWatermarkScale{1}
+\SetWatermarkText{DRAFT}
+
+\else
+%%do nothing
+\fi
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{secnumdepth}{10}
+\setcounter{tocdepth}{10}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%COMANDOS CRIADOS
+
+\newcommand{\media}[1] {
+\langle{#1}\rangle
+}
+
+%comando \hoje
+%nada mais eh do que o comando \today com meses com letras maiusculas
+
+\def\hoje{\number\day\space de\space\ifcase\month\or
+ Janeiro\or Fevereiro\or Mar\c{c}o\or Abril\or Maio\or Junho\or
+      Julho\or Agosto\or Setembro\or Outubro\or Novembro\or Dezembro\fi
+\space de\space\number\year}
+
+
+\newcommand{\epigrafe}[2]{
+
+{\large \parbox{2cm}{\hspace*{7cm}}}%
+\parbox[t]{12cm}
+{
+\textit{#1}
+\par ----- #2.\\\\
+}}
+
+\newcommand{\apresentacao}[1] {
+\hspace{.2\textwidth} % posicionando a minipage
+    \begin{minipage}{.7\textwidth}
+          \begin{flushright}
+          \begin{sloppypar}
+        {{\large \parbox{2cm}{\hspace*{7cm}}}%
+\parbox[t]{8.5cm}
+{
+#1 \\
+\par
+}}\\[0.3cm]
+\end{sloppypar}
+\end{flushright}
+\end{minipage}
+}
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%definicao de novo estilo de capitulo
+
+\usepackage{color,calc,graphicx,soul,fourier} %packages necessarias
+
+
+%%%ESTA É A COR VERMELHA DEFINIDA, PARA MUDAR A COR É SÓ MUDAR O RGB ABAIXO.
+\definecolor{nicered}{rgb}{.647,.129,.149} %crio uma cor
+
+
+\makeatletter
+\newlength\dlf@normtxtw
+\setlength\dlf@normtxtw{\textwidth}
+\def\myhelvetfont{\def\sfdefault{mdput}}
+\newsavebox{\feline@chapter}
+\newcommand\feline@chapter@marker[1][4cm]{%
+\sbox\feline@chapter{%
+\resizebox{!}{#1}{\fboxsep=1pt%
+\colorbox{nicered}{\color{white}\bfseries\sffamily\thechapter}%
+}}%
+\rotatebox{90}{%
+\resizebox{%
+\heightof{\usebox{\feline@chapter}}+\depthof{\usebox{\feline@chapter}}}%
+{!}{\scshape\so\@chapapp}}\quad%
+\raisebox{\depthof{\usebox{\feline@chapter}}}{\usebox{\feline@chapter}}%
+}
+\newcommand\feline@chm[1][4cm]{%
+\sbox\feline@chapter{\feline@chapter@marker[#1]}%
+\makebox[0pt][l]{%aka\rlap
+\makebox[1cm][r]{\usebox\feline@chapter}%
+}}
+
+
+\makechapterstyle{daleif1}{
+\renewcommand\chapnamefont{\normalfont\Large\scshape\raggedleft\so}
+\renewcommand\chaptitlefont{\normalfont\huge\bfseries\scshape\color{nicered}}
+\renewcommand\chapternamenum{}
+\renewcommand\printchaptername{}
+\renewcommand\printchapternum{\null\hfill\feline@chm[2.5cm]\par}
+\renewcommand\afterchapternum{\par\vskip\midchapskip}
+\renewcommand\printchaptertitle[1]{\chaptitlefont\raggedleft##1\par}
+}
+
+
+
+\makeatother
+\chapterstyle{daleif1}  %%aqui eu falo o estilo que vou falar
+
+%%%%--> a seguir defino o estilo do titulo das seções
+
+%%%Agradecimentos: Ronaldo C. Prati.
+%%%Requer: \usepackage{titlesec} \usepackage{xcolor}
+
+  \titleformat{\section} {} {\textcolor{nicered}{\LARGE\bfseries\thesection}} {1em}
+    {\LARGE\bfseries\textcolor{nicered}}
+
+     \titleformat{\subsection} {} {\textcolor{nicered}{\Large\bfseries\thesubsection}} {1em}
+    {\Large\bfseries\textcolor{nicered}}
+
+         \titleformat{\subsubsection} {} {\textcolor{nicered}{\large\bfseries\thesubsubsection}} {1em}
+    {\large\bfseries\textcolor{nicered}}
+
+       \titleformat{\paragraph} {} {\textcolor{nicered}{\large\bfseries\theparagraph}} {1em}
+    {\large\bfseries\textcolor{nicered}}
+
+    \let\subsubsubsection=\paragraph
+    \setcounter{tocdepth}{4}
+
+%% \titleformat{\part}{\normalfont\normalsize\bfseries}{\thepart}{1em}{}
+
+\newcommand\BackgroundPic{
+\put(0,0){
+\parbox[b][\paperheight]{\paperwidth}{%
+\vfill
+\centering
+\includegraphics[width=\paperwidth,height=\paperheight,
+keepaspectratio]{imagens/fundo.pdf}%
+\vfill
+}}}
+
+
+%%modo antigo, mas funcional: (deixei como exemplo para part)
+
+
+\titleformat{\part} {} {\pagestyle{empty}\textcolor{nicered}{\HUGE\bfseries\thepart}} {1em}
+    {\AddToShipoutPicture*{\BackgroundPic}
+\pagestyle{empty}\HUGE\bfseries\textcolor{nicered}\ClearShipoutPicture\textcolor{nicered}
+}
+
+
+\definecolor{MyGray}{rgb}{0.82,0.87,1.00}
+
+\newcommand\MyQuoteFrameCommand[1]{%
+  \setlength\fboxsep{2ex}\setlength\fboxrule{.5pt}%
+   \fcolorbox{black}{MyGray}{%
+    \hskip-\fboxsep\hskip-\fboxrule\hskip\leftmargini
+     #1%
+    \hskip-\fboxsep\hskip-\fboxrule\hskip\leftmargini
+   }%
+
+}
+
+\newenvironment{definicao}{%
+ \def\FrameCommand{\MyQuoteFrameCommand}%
+  \framed  \setlength\parindent{0pt}}%
+ {\endframed}
+
+
+\newenvironment{exercise}%          environment name
+{\textbf{Exercise}\begin{itshape}}% begin code
+{\end{itshape}}%                    end code
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

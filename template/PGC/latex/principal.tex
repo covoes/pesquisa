@@ -1,0 +1,117 @@
+
+\documentclass[a4paper, 12pt, oneside, brazil]{memoir}
+
+%--->>>Packages e Configuracoes
+
+\input{config} %%este arquivo contem mais detalhes da configuracao deste modelo
+
+%----------------------------
+%%Evitar linhas órfãns.
+%%Agrad. Ronaldo C. Prati
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=10000
+\DoubleSpacing
+\usepackage{verbatim}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+%----------------------------
+\usepackage{xcolor}
+\usepackage{graphicx}
+\graphicspath{{Figuras/}}
+% Definindo novas cores
+\definecolor{verde}{rgb}{0,0.5,0}
+% Configurando layout para mostrar codigos C++
+\usepackage{listings}
+\lstset{
+  language=C++,
+  basicstyle=\ttfamily\small,
+  keywordstyle=\color{blue},
+  stringstyle=\color{verde},
+  commentstyle=\color{red},
+  extendedchars=true,
+  showspaces=false,
+  showstringspaces=false,
+  numbers=left,
+  numberstyle=\tiny,
+  breaklines=true,
+  backgroundcolor=\color{green!10},
+  breakautoindent=true,
+  captionpos=b,
+  xleftmargin=0pt,
+}
+
+%##############################################################################################################
+%% INICIO DE DOCUMENTO
+%##############################################################################################################
+
+\begin{document}
+
+%%%%%%%%%%%%%% CAPA %%%%%%%%%%%%%%%%%%%%%%%%%
+\input{capa}
+%%%%%%%%%%%%%%% RESUMO %%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\thispagestyle{empty}
+
+\null\vfill
+
+
+\chapter*{Resumo}
+
+Preencha seu resumo aqui
+
+
+\thispagestyle{plain}
+\setcounter{chapter}{0}%
+\newcommand{\PC}[1]{\ensuremath{\left(#1\right)}}
+
+%%%%%%%%%%%%%%% DEMAIS CAPITULOS  %%%%%%%%%%%
+
+\thispagestyle{empty}
+\newpage
+\begin{KeepFromToc}
+\tableofcontents
+\end{KeepFromToc}
+
+\pagebreak
+\pagenumbering{arabic}
+\thispagestyle{empty}
+\newcommand{\itemsecao}[1]{\noindent{\textbf #1}}
+
+\chapter{Introdução}\label{introducao}
+...
+
+\chapter{Justificativa}
+
+...
+
+\chapter{Objetivos}\label{ch:obj}
+
+...
+
+\chapter{Fundamentação Teórica}\label{cap:fund}
+
+\chapter{Metodologia}\label{cap:metod}
+
+\chapter{Análise de Resultados}\label{cap:resultados}
+
+\chapter{Plano de Trabalho}\label{cap:plano}
+
+\chapter{Conclusão e Trabalhos Futuros}\label{cap:conc}
+
+
+%%%%%%%%%%%%%%% BIBLIOGRAFIA %%%%%%%%%%%%%%
+\bibliographystyle{abnt-alf} %estilo de bibliografia
+\pagebreak
+\renewcommand{\chaptername}{\space} %%limpa o nome ''Capítulo''
+\renewcommand{\thechapter}{R} %%define o capitulo por letra :-)
+\renewcommand{\bibsection}{\chapter{Referências}}
+\bibliography{bibliografia}
+
+%%%%%%%%%%%%%%%%%%%% ANEXOS %%%%%%%%%%%%%%%
+\renewcommand{\thechapter}{A} %%define o capitulo por letra :-)
+
+\pagebreak
+\end{document}
