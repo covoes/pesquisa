@@ -12,6 +12,7 @@
   Aproveite-se disso e não coloque todo o conteúdo do parágrafo em uma única linha de texto. 
   Cada frase ficando em uma linha facilita identificar as mudanças nas revisões.
   - Procure sempre ter seu texto em um repositório git (seja github/bitbucket/etc), para que as revisões sejam feitas via pull request.
+  - Tags para símbolos matemáticos neste [link](https://www.caam.rice.edu/~heinken/latex/symbols.pdf)
 
 # Experimentos/Análises
 
