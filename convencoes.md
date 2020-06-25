@@ -8,6 +8,7 @@
   - Conjuntos: letras caligráficas maiúsculas (`\mathcal` no LaTeX): ![\mathcal{X}, \mathcal{Y}](https://render.githubusercontent.com/render/math?math=%5Cmathcal%7BX%7D%2C%20%5Cmathcal%7BY%7D)
   - Por exemplo, podemos definir um cojunto de dados como ![\mathcal{X} = \{\mathbf{x}_i\}_{i=1}^N, \mathbf{x}_i \in \mathbb{R}^M](https://render.githubusercontent.com/render/math?math=%5Cmathcal%7BX%7D%20%3D%20%5C%7B%5Cmathbf%7Bx%7D_i%5C%7D_%7Bi%3D1%7D%5EN%2C%20%5Cmathbf%7Bx%7D_i%20%5Cin%20%5Cmathbb%7BR%7D%5EM)
 - LaTeX
+  - Caso não conheça LaTeX, sugiro dar uma olhada nas ![notas do curso de LaTeX da Profa. Carla Negri](http://professor.ufabc.edu.br/~carla.negri/latex/apostila.pdf).
   - Um novo parágrafo só é iniciado ao ter uma linha em branco entre duas sentenças. 
   Aproveite-se disso e não coloque todo o conteúdo do parágrafo em uma única linha de texto. 
   Cada frase ficando em uma linha facilita identificar as mudanças nas revisões.
